@@ -57,9 +57,6 @@ class _FileUploadAppState extends State<FileUploadApp> {
       print("test");
       print(response.statusCode);
       status = response.statusCode;
-      Pattern pattern = r'.*\.(xlsx|xls|csv)';
-      RegExp regex = RegExp(pattern);
-      if (regex.hasMatch(selected_file)) status = 400;
       if (response.statusCode == 201) print("Uploaded!");
     });
     showDialog(
